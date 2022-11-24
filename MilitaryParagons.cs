@@ -171,60 +171,130 @@ namespace MilitaryParagons
                 }
             }
         }
-        public override void OnMainMenu()
+        public override void OnTitleScreen()
         {
-            if (Settings.HeliParagonOP == true || Settings.DartlingParagonOP || Settings.SniperParagonOP || Settings.MortarParagonOP || Settings.SubParagonOP)
+            if (Settings.HeliParagonOP == true || Settings.DartlingParagonOP == true || Settings.SniperParagonOP == true || Settings.MortarParagonOP == true || Settings.SubParagonOP == true )
             {
-                if(Settings.TogglePopup == true)
+                if (Settings.TogglePopup == true)
                 {
-                    PopupScreen.instance.ShowOkPopup("OP paragon's have been loaded, check the console to see which ones are on.");
+                    PopupScreen.instance.ShowOkPopup("OP military paragon's have been loaded, check the console to see which ones are on.");
                 }
-                if(Settings.SniperParagonOP == true)
+                if (Settings.DartlingParagonOP == false)
                 {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The sniper paragon is on the OP version!");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "///////////////////////////////////////////////////////////////");
+                    if (Settings.SniperParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the OP version!         ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the balanced version!   ///");
+                    }
+                    if (Settings.MortarParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the OP version!         ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the balanced version!   ///");
+                    }
+                    if (Settings.SubParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the OP version!             ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the balanced version!       ///");
+                    }
+                    if (Settings.HeliParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the OP version!            ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the balanced version!      ///");
+                    }
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The dartling gunner paragon is on the balanced version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "///////////////////////////////////////////////////////////////");
+                }
+                else if (Settings.SniperParagonOP == false || Settings.MortarParagonOP == false)
+                {
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/////////////////////////////////////////////////////////////");
+                    if (Settings.SniperParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the OP version!       ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the balanced version! ///");
+                    }
+                    if (Settings.MortarParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the OP version!       ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the balanced version! ///");
+                    }
+                    if (Settings.SubParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the OP version!           ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the balanced version!     ///");
+                    }
+                    if (Settings.HeliParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the OP version!          ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the balanced version!    ///");
+                    }
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The dartling gunner paragon is on the OP version!     ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/////////////////////////////////////////////////////////////");
+                }
+                else if (Settings.HeliParagonOP == false)
+                {
+                    MelonLogger.Msg(System.ConsoleColor.Green, "//////////////////////////////////////////////////////////");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the OP version!    ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the OP version!    ///");
+                    if (Settings.SubParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the OP version!        ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the balanced version!  ///");
+                    }
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the balanced version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The dartling gunner paragon is on the OP version!  ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "//////////////////////////////////////////////////////////");
+                }
+                else if (Settings.SubParagonOP == false)
+                {
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/////////////////////////////////////////////////////////");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the OP version!   ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the OP version!   ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the balanced version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the OP version!      ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The dartling gunner paragon is on the OP version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/////////////////////////////////////////////////////////");
                 }
                 else
                 {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The sniper paragon is on the balanced version!");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "////////////////////////////////////////////////////");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// All military paragons are on OP the version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "////////////////////////////////////////////////////");
                 }
-                if (Settings.MortarParagonOP == true)
-                {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The mortar paragon is on the OP version!");
-                }
-                else
-                {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The mortar paragon is on the balanced version!");
-                }
-                if (Settings.SubParagonOP == true)
-                {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The sub paragon is on the OP version!");
-                }
-                else
-                {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The sub paragon is on the balanced version!");
-                }
-                if (Settings.HeliParagonOP == true)
-                {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The heli paragon is on the OP version!");
-                }
-                else
-                {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The heli paragon is on the balanced version!");
-                }
-                if (Settings.DartlingParagonOP == true)
-                {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The dartling paragon is on the OP version!");
-                }
-                else
-                {
-                    MelonLogger.Msg(System.ConsoleColor.Green, "The dartling paragon is on the balanced version!");
-                }
+                MelonLogger.Msg(System.ConsoleColor.Red, "This chart is made on startup, this is not accurate if you change the settings, click reload start screen message in settings to reload this.");
             }
             else
             {
                 if (Settings.TogglePopup == true)
                 {
-                    PopupScreen.instance.ShowOkPopup("All paragons have been set to balanced, if you would like to change this, check the mod settings.");
+                    PopupScreen.instance.ShowOkPopup("All military paragons have been set to balanced, if you would like to change this, check the mod settings.");
                 }
             }
         }
@@ -556,6 +626,134 @@ namespace MilitaryParagons
     }
     public class Settings : ModSettings
     {
+        public static void OPConsoleList()
+        {
+            if (Settings.HeliParagonOP == true || Settings.DartlingParagonOP == true || Settings.SniperParagonOP == true || Settings.MortarParagonOP == true || Settings.SubParagonOP == true)
+            {
+                if (Settings.TogglePopup == true)
+                {
+                    PopupScreen.instance.ShowOkPopup("OP military paragon's have been loaded, check the console to see which ones are on.");
+                }
+                if (Settings.DartlingParagonOP == false)
+                {
+                    MelonLogger.Msg(System.ConsoleColor.Green, "///////////////////////////////////////////////////////////////");
+                    if (Settings.SniperParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the OP version!         ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the balanced version!   ///");
+                    }
+                    if (Settings.MortarParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the OP version!         ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the balanced version!   ///");
+                    }
+                    if (Settings.SubParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the OP version!             ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the balanced version!       ///");
+                    }
+                    if (Settings.HeliParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the OP version!            ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the balanced version!      ///");
+                    }
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The dartling gunner paragon is on the balanced version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "///////////////////////////////////////////////////////////////");
+                }
+                else if (Settings.SniperParagonOP == false || Settings.MortarParagonOP == false)
+                {
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/////////////////////////////////////////////////////////////");
+                    if (Settings.SniperParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the OP version!       ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the balanced version! ///");
+                    }
+                    if (Settings.MortarParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the OP version!       ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the balanced version! ///");
+                    }
+                    if (Settings.SubParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the OP version!           ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the balanced version!     ///");
+                    }
+                    if (Settings.HeliParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the OP version!          ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the balanced version!    ///");
+                    }
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The dartling gunner paragon is on the OP version!     ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/////////////////////////////////////////////////////////////");
+                }
+                else if (Settings.HeliParagonOP == false)
+                {
+                    MelonLogger.Msg(System.ConsoleColor.Green, "//////////////////////////////////////////////////////////");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the OP version!    ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the OP version!    ///");
+                    if (Settings.SubParagonOP == true)
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the OP version!        ///");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the balanced version!  ///");
+                    }
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the balanced version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The dartling gunner paragon is on the OP version!  ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "//////////////////////////////////////////////////////////");
+                }
+                else if (Settings.SubParagonOP == false)
+                {
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/////////////////////////////////////////////////////////");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The sniper monkey paragon is on the OP version!   ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The mortar monkey paragon is on the OP version!   ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The submarine paragon is on the balanced version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The heli pilot paragon is on the OP version!      ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// The dartling gunner paragon is on the OP version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/////////////////////////////////////////////////////////");
+                }
+                else
+                {
+                    MelonLogger.Msg(System.ConsoleColor.Green, "////////////////////////////////////////////////////");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "/// All military paragons are on OP the version! ///");
+                    MelonLogger.Msg(System.ConsoleColor.Green, "////////////////////////////////////////////////////");
+                }
+                MelonLogger.Msg(System.ConsoleColor.Red, "This chart is made on startup, this is not accurate if you change the settings, click reload start screen message in settings to reload this.");
+            }
+            else
+            {
+                if (Settings.TogglePopup == true)
+                {
+                    PopupScreen.instance.ShowOkPopup("All military paragons have been set to balanced, if you would like to change this, check the mod settings.");
+                }
+            }
+        }
+
         private static readonly ModSettingCategory OPParagons = new ("Toggle OP Mode of Paragons")
         {
             modifyCategory = category =>
@@ -639,6 +837,12 @@ namespace MilitaryParagons
             icon = GetTextureGUID<Main>("RayOfMAD_Portrait")
         };
 
+        public static readonly ModSettingButton PushMe = new(() => OPConsoleList())
+        {
+            displayName = "Reload Start Screen Message",
+            buttonText = "Reload",
+            buttonSprite = VanillaSprites.YellowBtnLong
+        };
         public static readonly ModSettingBool TogglePopup = new(true)
         {
             displayName = "Toggle Popup",
