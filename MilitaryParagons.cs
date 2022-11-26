@@ -68,8 +68,9 @@ namespace MilitaryParagons
                         towerModel.GetBehavior<ActivateAbilityOnRoundStartModel>().abilityModel.GetDescendants<CashModel>().ForEach(cash => cash.maximum = 1000000f);
                         towerModel.GetBehavior<ActivateAbilityOnRoundStartModel>().abilityModel.GetDescendants<CashModel>().ForEach(cash => cash.minimum = 1000000f);
                         attackModel.weapons[0].Rate = 0.000000000001f;
-                        towerModel.GetDescendants<DamageModel>().ForEach(damage => damage.damage *= 999999f);
-                        attackModel.weapons[0].projectile.GetDamageModel().damage = 40;
+                        attackModel.weapons[0].projectile.GetDamageModel().damage = 99999999f;
+                        attackModel.weapons[0].projectile.GetBehavior<EmitOnDamageModel>().projectile.GetDamageModel().damage = 9999999f;
+                        attackModel.weapons[0].projectile.GetBehavior<EmitOnDamageModel>().projectile.pierce = 999999f;
                     }
                     else
                     {
@@ -79,6 +80,8 @@ namespace MilitaryParagons
                         towerModel.GetBehavior<ActivateAbilityOnRoundStartModel>().abilityModel.GetDescendants<CashModel>().ForEach(cash => cash.minimum = 10000f);
                         attackModel.weapons[0].Rate = 0.02f;
                         attackModel.weapons[0].projectile.GetDamageModel().damage = 40.0f;
+                        attackModel.weapons[0].projectile.GetBehavior<EmitOnDamageModel>().projectile.GetDamageModel().damage = 10.0f;
+                        attackModel.weapons[0].projectile.GetBehavior<EmitOnDamageModel>().projectile.pierce = 100.0f;
                     }
                 }
                 if (towerModel.appliedUpgrades.Contains(ModContent.UpgradeID<DartlingParagon.RayOfMadUpgrade>()))
@@ -125,23 +128,15 @@ namespace MilitaryParagons
                 {
                     if (Settings.HeliParagonOP == true)
                     {
-                        var attackModel = towerModel.GetAttackModel();
-                        towerModel.GetDescendants<EmissionWithOffsetsModel>().ForEach(emission => emission.projectileCount = 10);
-                        towerModel.GetDescendants<DamageModel>().ForEach(damage => damage.damage *= 9999999f);
-                        towerModel.GetDescendants<WeaponModel>().ForEach(weapon => weapon.Rate *= 0.00001f);
-                        var attackModel2 = towerModel.GetAttackModels().Last();
-                        var createTower = attackModel2.weapons[0].projectile.GetBehavior<CreateTowerModel>();
-                        createTower.tower.GetBehavior<TowerExpireModel>().Lifespan *= 1.0f;
+                       towerModel.GetDescendants<EmissionWithOffsetsModel>().ForEach(emission => emission.projectileCount = 10);
+                       towerModel.GetDescendants<DamageModel>().ForEach(damage => damage.damage *= 9999999f);
+                       towerModel.GetBehavior<WeaponModel>().rate *= 0.00000001f;
                     }
                     else
                     {
-                        var attackModel = towerModel.GetAttackModel();
                         towerModel.GetDescendants<EmissionWithOffsetsModel>().ForEach(emission => emission.projectileCount = 3);
                         towerModel.GetDescendants<DamageModel>().ForEach(damage => damage.damage *= 3.0f);
-                        towerModel.GetDescendants<WeaponModel>().ForEach(weapon => weapon.Rate *= 0.33f);
-                        var attackModel2 = towerModel.GetAttackModels().Last();
-                        var createTower = attackModel2.weapons[0].projectile.GetBehavior<CreateTowerModel>();
-                        createTower.tower.GetBehavior<TowerExpireModel>().Lifespan *= 0.1f;
+                        towerModel.GetBehavior<WeaponModel>().rate *= 0.33f;
                     }
                 }
                 if (towerModel.appliedUpgrades.Contains(ModContent.UpgradeID<SubParagon.FirstStrikeCommanderUpgrade>()))
@@ -442,6 +437,7 @@ namespace MilitaryParagons
                     attackModel2.weapons[0].Rate = 0.05f;
                     attackModel2.range = 1000.0f;
                     attackModel2.weapons[0].projectile.GetBehavior<CreateProjectileOnExpireModel>().projectile.GetDamageModel().damage = 1000.0f;
+                    attackModel2.weapons[0].projectile.GetDescendants<DamageModel>().ForEach(damage => damage.immuneBloonProperties = BloonProperties.None);
                     towerModel.AddBehavior(Game.instance.model.GetTowerFromId("MonkeySub-050").GetBehavior<PreEmptiveStrikeLauncherModel>().Duplicate());
                     var submergeEffect = Game.instance.model.GetTowerFromId("MonkeySub-502").Duplicate().GetBehavior<SubmergeEffectModel>().effectModel;
                     var submerge = Game.instance.model.GetTowerFromId("MonkeySub-502").Duplicate().GetBehavior<SubmergeModel>();
@@ -577,7 +573,7 @@ namespace MilitaryParagons
                     createTower.tower.RemoveBehavior<CreateSoundOnSellModel>();
                     createTower.tower.name += "ApacheCommander_Apache";
                     createTower.tower.AddBehavior(Game.instance.model.GetTowerFromId("Sentry").GetBehavior<TowerExpireModel>().Duplicate());
-                    createTower.tower.GetBehavior<TowerExpireModel>().Lifespan *= 5.0f;
+                    createTower.tower.GetBehavior<TowerExpireModel>().Lifespan = 60f;
                     towerModel.AddBehavior(new OverrideCamoDetectionModel("OverrideCamoDetectionModel_", true));
                     towerModel.GetDescendants<FilterInvisibleModel>().ForEach(model2 => model2.isActive = false);
                     createTower.tower.AddBehavior(new OverrideCamoDetectionModel("OverrideCamoDetectionModel_", true));
