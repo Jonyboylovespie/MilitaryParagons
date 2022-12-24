@@ -10,16 +10,11 @@ using BTD_Mod_Helper.Api.Display;
 using BTD_Mod_Helper.Api.Enums;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
-using System;
 using MelonLoader;
 using ModHelperData = MilitaryParagons.ModHelperData;
 using BTD_Mod_Helper.Api.ModOptions;
-using System.IO;
 using Assets.Scripts.Unity.UI_New.Popups;
-using Action = System.Action;
 using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using Assets.Scripts.Utils;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
 using Assets.Scripts.Models.Towers.Projectiles;
 using Assets.Scripts.Models.Towers.Weapons;
 using Assets.Scripts.Models.Towers.Filters;
@@ -27,20 +22,12 @@ using Assets.Scripts.Models.GenericBehaviors;
 using Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors;
 using Assets.Scripts.Models.Towers.Behaviors.Emissions;
 using System.Linq;
-using Il2CppSystem;
 using UnityEngine;
 using BTD_Mod_Helper.Api.Data;
 using BTD_Mod_Helper.Api.Components;
-using static Assets.Scripts.Models.ServerEvents.DailyChallenges;
 using Assets.Scripts.Models.Towers.Mods;
 using Assets.Scripts.Models;
 using BTD_Mod_Helper.Api.Helpers;
-using Assets.Scripts.Simulation.Towers.Behaviors;
-using Assets.Scripts.Simulation.Objects;
-using Assets.Scripts.Simulation.Towers;
-using static MilitaryParagons.Main.MortarParagon;
-using static MilitaryParagons.Main.HeliParagon;
-using Assets.Scripts.Models.Powers;
 
 [assembly: MelonInfo(typeof(MilitaryParagons.Main), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
