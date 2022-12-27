@@ -68,31 +68,36 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Btd6ModHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\Mods\Btd6ModHelper.dll</HintPath>
     </Reference>
-    <Reference Include="Il2CppInterop.Runtime">
+    <Reference Include="Il2CppInterop.Runtime, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Il2Cppmscorlib, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
     </Reference>
-    <Reference Include="MelonLoader, Version=0.5.5.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Il2CppSystem, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\net35\MelonLoader.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Unity.ResourceManager.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\Unity.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

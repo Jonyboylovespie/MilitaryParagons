@@ -1,9 +1,9 @@
-﻿using Assets.Scripts.Models.Towers;
-using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Unity.Display;
+﻿using Il2CppAssets.Scripts.Models.Towers;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors;
+using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
+using Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors;
+using Il2CppAssets.Scripts.Unity;
+using Il2CppAssets.Scripts.Unity.Display;
 using BTD_Mod_Helper;
 using BTD_Mod_Helper.Api;
 using BTD_Mod_Helper.Api.Display;
@@ -13,21 +13,22 @@ using BTD_Mod_Helper.Extensions;
 using MelonLoader;
 using ModHelperData = MilitaryParagons.ModHelperData;
 using BTD_Mod_Helper.Api.ModOptions;
-using Assets.Scripts.Unity.UI_New.Popups;
-using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using Assets.Scripts.Models.Towers.Projectiles;
-using Assets.Scripts.Models.Towers.Weapons;
-using Assets.Scripts.Models.Towers.Filters;
-using Assets.Scripts.Models.GenericBehaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
+using Il2CppAssets.Scripts.Unity.UI_New.Popups;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
+using Il2CppAssets.Scripts.Models.Towers.Projectiles;
+using Il2CppAssets.Scripts.Models.Towers.Weapons;
+using Il2CppAssets.Scripts.Models.Towers.Filters;
+using Il2CppAssets.Scripts.Models.GenericBehaviors;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
 using System.Linq;
 using UnityEngine;
 using BTD_Mod_Helper.Api.Data;
 using BTD_Mod_Helper.Api.Components;
-using Assets.Scripts.Models.Towers.Mods;
-using Assets.Scripts.Models;
+using Il2CppAssets.Scripts.Models.Towers.Mods;
+using Il2CppAssets.Scripts.Models;
 using BTD_Mod_Helper.Api.Helpers;
+using Il2Cpp;
 
 [assembly: MelonInfo(typeof(MilitaryParagons.Main), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
