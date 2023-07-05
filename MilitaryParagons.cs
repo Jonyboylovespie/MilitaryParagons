@@ -290,7 +290,6 @@ namespace MilitaryParagons
             public class RayOfMad : ModVanillaParagon
             {
                 public override string BaseTower => "DartlingGunner-250";
-                public override string Name => "DartlingGunner";
             }
             public class RayOfMadUpgrade : ModParagonUpgrade<RayOfMad>
             {
@@ -346,7 +345,6 @@ namespace MilitaryParagons
             public class EliteMOABCrippler : ModVanillaParagon
             {
                 public override string BaseTower => "SniperMonkey-025";
-                public override string Name => "SniperMonkey";
             }
             public class EliteMOABCripplerUpgrade : ModParagonUpgrade<EliteMOABCrippler>
             {
@@ -400,7 +398,6 @@ namespace MilitaryParagons
             public class FirstStrikeCommander : ModVanillaParagon
             {
                 public override string BaseTower => "MonkeySub-205";
-                public override string Name => "MonkeySub";
             }
             public class FirstStrikeCommanderUpgrade : ModParagonUpgrade<FirstStrikeCommander>
             {
@@ -469,7 +466,6 @@ namespace MilitaryParagons
             public class BlooncinerationAndAwe : ModVanillaParagon
             {
                 public override string BaseTower => "MortarMonkey-250";
-                public override string Name => "MortarMonkey";
             }
             public class BlooncinerationAndAweUpgrade : ModParagonUpgrade<BlooncinerationAndAwe>
             {
@@ -517,7 +513,6 @@ namespace MilitaryParagons
             public class ApacheCommander : ModVanillaParagon
             {
                 public override string BaseTower => "HeliPilot-502";
-                public override string Name => "HeliPilot";
             }
             public class ApacheCommanderUpgrade : ModParagonUpgrade<ApacheCommander>
             {
