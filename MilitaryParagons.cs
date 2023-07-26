@@ -426,7 +426,7 @@ namespace MilitaryParagons
                     towerModel.AddBehavior(Game.instance.model.GetTowerFromId("MonkeySub-050").GetBehavior<PreEmptiveStrikeLauncherModel>().Duplicate());
                     var submergeEffect = Game.instance.model.GetTowerFromId("MonkeySub-502").Duplicate().GetBehavior<SubmergeEffectModel>().effectModel;
                     var submerge = Game.instance.model.GetTowerFromId("MonkeySub-502").Duplicate().GetBehavior<SubmergeModel>();
-                    towerModel.AddBehavior(new HeroXpScaleSupportModel("HeroXpScaleSupportModel_", true, submerge.heroXpScale, null));
+                    towerModel.AddBehavior(new HeroXpScaleSupportModel("HeroXpScaleSupportModel_", true, submerge.heroXpScale, null, towerModel.icon.guidRef, towerModel.icon.guidRef));
                     towerModel.AddBehavior(new AbilityCooldownScaleSupportModel("AbilityCooldownScaleSupportModel_", true, submerge.abilityCooldownSpeedScale, true, false, null, submerge.buffLocsName, submerge.buffIconName, false, submerge.supportMutatorPriority));
                     foreach (var attackModels in towerModel.GetAttackModels())
                     {
@@ -526,7 +526,6 @@ namespace MilitaryParagons
                 {
                     towerModel.doesntRotate = true;
                     towerModel.GetBehavior<DisplayModel>().ignoreRotation = true;
-                    TowerModel backup = Game.instance.model.GetTowerFromId("HeliPilot-502").Duplicate();
                     var attackModel = towerModel.GetAttackModel();
                     towerModel.GetBehavior<AirUnitModel>().display = ModContent.CreatePrefabReference<ApacheCommanderAirUnitDisplay>();
                     towerModel.AddBehavior(Game.instance.model.GetTowerFromId("BananaFarm-005").GetBehavior<CollectCashZoneModel>().Duplicate());
@@ -544,13 +543,13 @@ namespace MilitaryParagons
                     towerModel.AddBehavior(Game.instance.model.GetTowerFromId("HeliPilot-050").GetAbilities()[1].GetBehavior<ActivateAttackModel>().attacks[1].Duplicate());
                     towerModel.GetAttackModels().Last().GetDescendants<WeaponModel>().ForEach(weapon => weapon.Rate = 50.0f);
                     towerModel.AddBehavior(Game.instance.model.GetTowerFromId("EngineerMonkey-200").GetAttackModel().Duplicate());
-                    var attackModel2 = towerModel.GetAttackModels().Last();
-                    var createTower = attackModel2.weapons[0].projectile.GetBehavior<CreateTowerModel>();
-                    createTower.tower = backup;
+                    var createTower = towerModel.GetDescendant<CreateTowerModel>();
+                    createTower.tower = Game.instance.model.GetTowerFromId("HeliPilot-502").Duplicate();
                     createTower.tower.cost = 0.0f;
                     createTower.tower.radius = 0.0f;
                     createTower.tower.isSubTower = true;
                     createTower.tower.display = new() { guidRef = "" };
+                    createTower.tower.ignoreTowerForSelection = true;
                     createTower.tower.GetBehavior<AirUnitModel>().display = ModContent.CreatePrefabReference<ApacheCommanderAirUnitSmallDisplay>();
                     createTower.tower.RemoveBehavior<CreateSoundOnTowerPlaceModel>();
                     createTower.tower.RemoveBehavior<CreateSoundOnSellModel>();
