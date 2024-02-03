@@ -2,7 +2,7 @@
 {
     public static class ModHelperData
     {
-        public const string WorksOnVersion = "40";
+        public const string WorksOnVersion = "40.2";
         public const string Version = "1.0.7";
         public const string Name = "Military Paragons";
         public const string Description =
