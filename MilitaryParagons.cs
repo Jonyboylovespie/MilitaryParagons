@@ -145,6 +145,7 @@ namespace MilitaryParagons
                 }
             }
         }
+        /*
         public class SubParagon
         {
             public class FirstStrikeCommander : ModVanillaParagon
@@ -213,6 +214,7 @@ namespace MilitaryParagons
                 }
             }
         }
+        */
         public class MortarParagon
         {
             public class BlooncinerationAndAwe : ModVanillaParagon
